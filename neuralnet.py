@@ -324,6 +324,8 @@ class NeuralNet:
                     log_str += "%s: %g  " % ('valid_'+func.__name__, metric[i][1])
 
             print(log_str)
+
+        return log_str
     
     
     # X: input data
@@ -385,4 +387,6 @@ class NeuralNet:
         summary_str += "%50s\n" % (str_temp)
 
         print(summary_str)
+
+        return summary_str
 
