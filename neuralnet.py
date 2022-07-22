@@ -253,6 +253,9 @@ class NeuralNet:
     # metric: metrics calculation for single epoch
     # history: dictionary object for loss and metrics history
     def __history(self, loss:list, metric: list, history:dict):
+        if not history:
+            return
+        
         #loss
         if 'train_loss' not in history:
             history['train_loss'] = []
@@ -306,7 +309,7 @@ class NeuralNet:
 
         else: #verbose == 2
             if not self.__valid_data:
-                log_str += log_str + "%s: %g" % (func.__name__, metric[i][0])
+                log_str += "  train_loss: %g  " % (loss[0])
 
             else:
                 log_str += "  train_loss: %g  valid_loss: %g  " % (loss[0], loss[1])
@@ -319,6 +322,8 @@ class NeuralNet:
 
                     log_str += "%s: %g  " % ('train_'+func.__name__, metric[i][0])
                     log_str += "%s: %g  " % ('valid_'+func.__name__, metric[i][1])
+
+            print(log_str)
     
     
     # X: input data
