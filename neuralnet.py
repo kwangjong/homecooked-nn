@@ -253,7 +253,7 @@ class NeuralNet:
     # metric: metrics calculation for single epoch
     # history: dictionary object for loss and metrics history
     def __history(self, loss:list, metric: list, history:dict):
-        if not history:
+        if history == None:
             return
         
         #loss
