@@ -22,8 +22,8 @@ bce = (lambda x, y: -(y*np.log(x+1e-8)+(1-y)*np.log(1-x+1e-8)).mean(), lambda x,
 bce[0].__name__ = 'binary_cross_entropy'
 
 #metric
-__bmap = lambda x: (x+0.5)//1 #binaary categorical data mapper with threshold 0.5
-bacc = lambda x, y: np.mean(__bmap(x) == y) #binary accuracy
+bmap = lambda x: (x+0.5)//1 #binaary categorical data mapper with threshold 0.5
+bacc = lambda x, y: np.mean(bmap(x) == y) #binary accuracy
 bacc.__name__ = 'binary_accuracy'
 
 
