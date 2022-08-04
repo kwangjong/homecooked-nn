@@ -213,7 +213,11 @@ model.fit(
 ```python
 import matplotlib.pyplot as plt
 
-plt.plot(history['train_loss'][100:], label='train loss')
-plt.plot(history['valid_loss'][100:], label='validation loss')
+plt.figure(figsize=(14,7))
+plt.plot(history['train_loss'][100:], label='Train Loss')
+plt.plot(history['valid_loss'][100:], label='Validation Loss')
+plt.title('Train History')
 plt.show()
 ```
+![img](https://i.imgur.com/vOQvxCv.png)
+
