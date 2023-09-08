@@ -3,7 +3,7 @@
 My attempt on building a neural network from scratch.
 
 * [Demo](https://huggingface.co/spaces/kwangjong/homecooked-nn)
-* [Blog](https://hf.space/streamlit/kwangjong/homecooked-nn/+)
+* [Blog](https://kwangjong.github.io/blog/2022-07-09-🍳HomeCooked-Neural-Network)
 * [Kaggle](https://kwangjong.github.io/2022/07/09/homecooked-nn/)
 
 ## Demo
